@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/handler_test.dir/link.d CMakeFiles/handler_test.dir/main.c.o -o handler_test

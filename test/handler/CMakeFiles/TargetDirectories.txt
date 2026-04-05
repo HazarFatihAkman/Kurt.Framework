@@ -1,0 +1,3 @@
+/home/hfa/Desktop/workspace/Kurt.Framework/test/handler/CMakeFiles/handler_test.dir
+/home/hfa/Desktop/workspace/Kurt.Framework/test/handler/CMakeFiles/edit_cache.dir
+/home/hfa/Desktop/workspace/Kurt.Framework/test/handler/CMakeFiles/rebuild_cache.dir
