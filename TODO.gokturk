@@ -1,0 +1,12 @@
+>> handler interface.
+
+>> controller interface [get, post, etc. attributes]
+
+>> bind handler with controller.
+
+>> async tasking
+
+>> security protocols
+
+>> binary protocol for data transfering
+
