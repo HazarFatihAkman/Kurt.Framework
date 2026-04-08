@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hfa/Desktop/workspace/Kurt.Framework/test/handler/main.c" "CMakeFiles/handler_test.dir/main.c.o" "gcc" "CMakeFiles/handler_test.dir/main.c.o.d"
-  "" "handler_test" "gcc" "CMakeFiles/handler_test.dir/link.d"
+  "/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kurt.Framework/test/handler/main.c" "CMakeFiles/handler_test.dir/main.c.o" "gcc" "CMakeFiles/handler_test.dir/main.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

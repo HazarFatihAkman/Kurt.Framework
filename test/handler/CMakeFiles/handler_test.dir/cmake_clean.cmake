@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/handler_test.dir/link.d"
   "CMakeFiles/handler_test.dir/main.c.o"
   "CMakeFiles/handler_test.dir/main.c.o.d"
   "handler_test"

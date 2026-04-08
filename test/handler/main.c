@@ -23,8 +23,8 @@ _test_ptr_ handle_get(_test_t_ *test, uint8_t locked) {
   return test;
 }
 
-__HANDLER__(_test_t_, uint8_t, post_test);
-__HANDLER__(_test_t_, _test_ptr_, get_test);
+CORE_HANDLER(_test_t_, uint8_t, post_test);
+CORE_HANDLER(_test_t_, _test_ptr_, get_test);
 
 int main(int argv, char *args[]) {
   handler_post_test post_test = {
@@ -33,9 +33,8 @@ int main(int argv, char *args[]) {
     .handle = handle_post
   };
 
-  if (post_test.validator(post_test.value) == 1) {
-    post_test.handle(&post_test.value, 0);
-  }
+  uint8_t post_status = 0;
+  handler_post_test_process(&post_test, post_status);
 
   handler_get_test get_test = {
     .value = "test get",
@@ -43,10 +42,8 @@ int main(int argv, char *args[]) {
     .handle = handle_get
   };
 
-  if (get_test.validator(get_test.value) == 1) {
-    get_test.handle(&get_test.value, 0);
-  }
-
+  _test_ptr_ get_res;
+  handler_get_test_process(&get_test, get_res);
   return 0;
 }
 
