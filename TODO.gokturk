@@ -1,6 +1,21 @@
->> handler interface.
+>>-- handler interface.
 
->> controller interface [get, post, etc. attributes]
+>>> delete value in struct and create controller manager of created handlers.
+
+>>>- manager features ->>> handler_##name will be handler_{api_route}.
+>>>>- example ->>>> definition {
+  /api/user/login (post request) -> handler_login (manager will look for this handler directly)
+
+  /{version}/{controller}/{endpoint} -> ##name = {endpoint}
+
+  controller manager :
+  v1.h (main api version)
+  // list of void*
+}
+
+>>> add lock mechanism to handlers
+>>>- example ->>> 
+  request -> handler -> proccess (locked and created queque) -> response -> unlocked.
 
 >> bind handler with controller.
 
