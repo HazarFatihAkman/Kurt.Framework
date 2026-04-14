@@ -1,3 +1,0 @@
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kurt.Framework/test/handler/CMakeFiles/handler_test.dir
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kurt.Framework/test/handler/CMakeFiles/edit_cache.dir
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kurt.Framework/test/handler/CMakeFiles/rebuild_cache.dir

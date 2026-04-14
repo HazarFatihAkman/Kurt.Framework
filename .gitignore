@@ -53,3 +53,28 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# CMake build artifacts
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+# Common build directories
+build/
+out/
+bin/
+
+# IDE-specific CMake files
+.cmake/
+cmake-build-*/
+
+# User-specific presets
+CMakeUserPresets.json
+
+/test/
