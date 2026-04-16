@@ -1,0 +1,8 @@
+#ifndef KURT_FRAMEWORK_UTILS_H
+#define KURT_FRAMEWORK_UTILS_H
+
+#define ENUM_DEFINITION()
+#define ENUM_STR()
+
+#endif // KURT_FRAMEWORK_UTILS_H
+
