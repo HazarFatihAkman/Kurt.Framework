@@ -13,10 +13,9 @@
   core_controller("/v1/test", handlers, test);
 */
 
-#define CORE_CONTROLLER(path, handlers, name, data) \
+#define CORE_CONTROLLER(path, name, data) \
   typedef struct { \
     char *path; \
-    void **handlers; \
     char *data; \
   } controller_##name; \
   \
