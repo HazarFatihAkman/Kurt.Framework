@@ -22,6 +22,10 @@ typedef struct {
   const char *conn_type;
 } http_properties_t;
 
-#define CORE_HTTP_REQUEST(properties, req, handler)
+/*
+* @brief Route definition.
+* CORE_ROUTE(GET, "v1/campings", "application/json")
+**/
+#define CORE_ROUTE(type, path, format, handler)
 
 #endif // KURT_FRAMEWORK_HTTP_ATTRIBUTE_H
