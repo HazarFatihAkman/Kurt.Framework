@@ -15,6 +15,11 @@ typedef enum {
   CONNECT
 } req_type_e;
 
+typedef enum {
+  APP_JSON,
+  //...
+} format_e;
+
 typedef struct {
   req_type_e type;
   const char *path;
@@ -23,9 +28,9 @@ typedef struct {
 } http_properties_t;
 
 /*
-* @brief Route definition.
-* CORE_ROUTE(GET, "v1/campings", "application/json")
+* @brief Route definition. Example : (GET, "v1/campaings", APP_JSON, APP_JSON, getCampaings)
 **/
-#define CORE_ROUTE(type, path, format, handler)
+#define CORE_ROUTE(type, path, accepted_format, response_format, handler) \
+
 
 #endif // KURT_FRAMEWORK_HTTP_ATTRIBUTE_H

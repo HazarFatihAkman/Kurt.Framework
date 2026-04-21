@@ -5,8 +5,7 @@
 #include <stddef.h>
 
 /*
-* @brief Default handler with validator.
-* Example : GET v1/campings/winter-1
+* @brief Default handler with validator. Example : GET v1/campaings/winter-1
 */
 #define CORE_DH(type, type_response, name) \
   typedef struct { \
@@ -31,8 +30,7 @@
   } \
 
 /*
-* @brief No-input handler.
-* Example : GET v1/campings
+* @brief No-input handler. Example : GET v1/campaings
 */
 #define CORE_NIH(type_response, name) \
   typedef struct { \
