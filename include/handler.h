@@ -52,7 +52,6 @@
 
 #define CORE_GET_DECL(_1, _2, _3, MACRO, ...) MACRO
 #define CORE_DECLARE_HANDLER(...) CORE_GET_DECL(__VA_ARGS__, CORE_DH, CORE_NIH)(__VA_ARGS__)
-
 #define CORE_DEFINE_HANDLER(name, ...) const handler_##name name = { __VA_ARGS__ }; \
 
 #endif // KURT_FRAMEWORK_HANDLER_H
