@@ -27,10 +27,4 @@ typedef struct {
   const char *conn_type;
 } http_properties_t;
 
-/*
-* @brief Route definition. Example : (GET, "v1/campaings", APP_JSON, APP_JSON, getCampaings)
-**/
-#define CORE_ROUTE(type, path, accepted_format, response_format, handler) \
-
-
 #endif // KURT_FRAMEWORK_HTTP_ATTRIBUTE_H
