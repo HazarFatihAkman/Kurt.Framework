@@ -13,7 +13,6 @@
   typedef struct { \
     uint8_t (*validator)(const type); \
     type_response (*handle)(type); \
-    http_properties_t props; \
   } handler_##name; \
   \
   extern const handler_##name name; \
@@ -38,7 +37,6 @@
 #define CORE_NIH(type_response, name) \
   typedef struct { \
     type_response (*handle)(void); \
-    http_properties_t props; \
   } handler_##name; \
   \
   extern const handler_##name name; \

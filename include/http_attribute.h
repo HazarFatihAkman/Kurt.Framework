@@ -1,8 +1,6 @@
 #ifndef KURT_FRAMEWORK_HTTP_ATTRIBUTE_H
 #define KURT_FRAMEWORK_HTTP_ATTRIBUTE_H
 
-#include "handler.h"
-
 typedef enum {
   GET,
   HEAD,

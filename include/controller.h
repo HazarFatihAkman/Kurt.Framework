@@ -1,6 +1,19 @@
 #ifndef KURT_FRAMEWORK_CONTROLLER_H
 #define KURT_FRAMEWORK_CONTROLLER_H
 
+#include "handler.h"
+#include "request.h"
+
+#define CORE_DECLARE_CONTROLLER_PATH(name) \
+  typedef struct { \
+    http_properties_t props; \
+    void (*process) (req_t *req); \
+  } controller_path_t; \
+  \
+  extern const controller_path_t name; \
+
+#define CORE_DEFINE_CONTROLLER_PATH(name, ...) const controller_path_t name =  { __VA_ARGS__ }; \
+
 /*
   include handler_1
   include handler_2
@@ -25,18 +38,5 @@
   ** Other process **
   GET_TEST will address "get" -> GET_TEST.handler_get_process(); // improve it
 */
-
-#define CORE_CONTROLLER(path, name, data) \
-  typedef struct { \
-    char *path; \
-    char *data; \
-  } controller_##name; \
-  \
-  static inline uint8_t controller_##name##__process( \
-    const controller_##name *self \
-  ) { \
-    return 0; \
-  }
-
 
 #endif /* KURT_FRAMEWORK_CONTROLLER_MANAGER_H */
