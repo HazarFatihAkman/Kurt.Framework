@@ -1,6 +1,8 @@
 #ifndef KURT_FRAMEWORK_HANDLER_H
 #define KURT_FRAMEWORK_HANDLER_H
 
+#include "http_attribute.h"
+
 #include <stdint.h>
 #include <stddef.h>
 
@@ -11,6 +13,7 @@
   typedef struct { \
     uint8_t (*validator)(const type); \
     type_response (*handle)(type); \
+    http_properties_t props; \
   } handler_##name; \
   \
   extern const handler_##name name; \
@@ -35,6 +38,7 @@
 #define CORE_NIH(type_response, name) \
   typedef struct { \
     type_response (*handle)(void); \
+    http_properties_t props; \
   } handler_##name; \
   \
   extern const handler_##name name; \

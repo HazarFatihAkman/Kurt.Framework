@@ -22,9 +22,11 @@ typedef enum {
 
 typedef struct {
   req_type_e type;
-  const char *path;
-  const char *format;
-  const char *conn_type;
+  char *path;
+  format_e format;
+  // const char *conn_type;
 } http_properties_t;
+
+void print_props(const http_properties_t props);
 
 #endif // KURT_FRAMEWORK_HTTP_ATTRIBUTE_H

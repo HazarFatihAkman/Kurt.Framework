@@ -3,10 +3,10 @@
 
 #include "http_attribute.h"
 
-#define CORE_DECLARE_REQUEST(properties, content_type, uuid) \
+#define CORE_DECLARE_REQUEST(props, content_type, uuid) \
   typedef struct { \
     const uint32_t uuid; \
-    const http_properties_t properties; \
+    const http_properties_t  props; \
     const void *content; \
   } req_##uuid##_t;
   \
