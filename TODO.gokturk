@@ -11,3 +11,11 @@
 >> binary protocol for data transfering
 
 >> database connection open/close automatic
+
+
+!!!controller done. improve searching algorithm!!! 
+
+///
+playground cli
+
+gcc main.c get_handler.c -o playground1
