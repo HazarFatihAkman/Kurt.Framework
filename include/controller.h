@@ -4,15 +4,19 @@
 #include "handler.h"
 #include "request.h"
 
-#define CORE_DECLARE_CONTROLLER_PATH(name) \
+// CORE_DECLARE_CONTROLLER_PATH controller_path_t
+#define CORE_DECLARE_CPATH(name) \
   typedef struct { \
     http_properties_t props; \
     void (*process) (req_t *req); \
-  } controller_path_t; \
+  } cpath_t; \
   \
-  extern const controller_path_t name; \
+  extern const cpath_t name; \
 
-#define CORE_DEFINE_CONTROLLER_PATH(name, ...) const controller_path_t name =  { __VA_ARGS__ }; \
+// CORE_DEFINE_CONTROLLER_PATH
+#define CORE_DEFINE_CPATH(name, ...) const cpath_t name =  { __VA_ARGS__ }; \
+
+
 
 /*
   include handler_1

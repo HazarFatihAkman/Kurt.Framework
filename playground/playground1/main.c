@@ -6,12 +6,14 @@
 #include "get_handler.h"
 #include "../../include/controller.h"
 
-CORE_DECLARE_CONTROLLER_PATH(v1_playground);
+// controller_example.h/c
+CORE_DECLARE_CPATH(v1_playground);
 
 static const http_properties_t props = {
   .path = "v1/playground",
   .format = APP_JSON,
-  .type = GET
+  .type = GET,
+  .parameter_count = 0
 };
 
 void v1_playground_process(req_t *req) {
@@ -20,12 +22,13 @@ void v1_playground_process(req_t *req) {
   printf("Response : %s\n", out);
 }
 
-CORE_DEFINE_CONTROLLER_PATH(v1_playground, props, v1_playground_process);
+CORE_DEFINE_CPATH(v1_playground, props, v1_playground_process);
 
-static const controller_path_t paths[1] = {
+static const cpath_t paths[1] = {
   v1_playground
 };
 
+// TEST
 int main(int argv, char *args[]) {
   printf("args 1 : %s\nargs : 2 %s\n", args[1], args[2]);
   while (1) {
