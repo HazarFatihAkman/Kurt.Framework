@@ -5,6 +5,19 @@
 
 #include "get_handler.h"
 #include "../../include/controller.h"
+#include "../../include/enum.h"
+#include "../../include/list.h"
+
+CORE_CKV(test, char*, char*);
+
+CORE_DECLARE_LIST(test_list, test_t, 2);
+
+CORE_DEFINE_LIST(test_list, 2,
+  {
+    { .key = "test", .value = "value" },
+    { .key = "test2", .value = "value2" }
+  }
+);
 
 // controller_example.h/c
 CORE_DECLARE_CPATH(v1_playground);
@@ -37,6 +50,8 @@ int main(int argv, char *args[]) {
       .content_len = 0,
       .content = ""
     };
+
+    for(int i = 0; i < test_list.size; i++) printf("key-value: %s | %p\n", test_list.values[i].key, test_list.values[i].key);
 
     for (int i = 0; i < 1; i++) {
       if (strcmp(args[1], paths[i].props.path) == 0 && atoi(args[2]) == paths[i].props.type) {

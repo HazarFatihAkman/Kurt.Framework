@@ -16,8 +16,6 @@
 // CORE_DEFINE_CONTROLLER_PATH
 #define CORE_DEFINE_CPATH(name, ...) const cpath_t name =  { __VA_ARGS__ }; \
 
-
-
 /*
   include handler_1
   include handler_2
